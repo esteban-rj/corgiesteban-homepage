@@ -1,4 +1,5 @@
 import Header from './Components/Header';
+import Carrousel from './Components/Carrousel';
 import './App.css';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <div className="App flex flex-col items-center">
       <Header></Header>
       <div className='w-2/3 justify-center mt-8'>
-        hola
+        <Carrousel></Carrousel>
       </div>
     </div>
   );

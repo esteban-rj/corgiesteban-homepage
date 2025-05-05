@@ -1,0 +1,93 @@
+:root {
+  --side-image-width: 100px;
+  --center-image-width: 150px;
+  --image-gap: 50px;
+  --transition-time: 250ms;
+}
+
+.carrousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+
+.carrousel-viewport {
+  display: flex;
+  gap: var(--image-gap);
+  overflow: visible;
+  position: relative;
+  align-items: center;
+  height: 180px; /* Accommodate the largest image height plus some margin */
+}
+
+.carrousel-image {
+  width: var(--side-image-width);
+  height: auto;
+  max-height: var(--side-image-width);
+  flex-shrink: 0;
+  transition: all var(--transition-time) ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrousel-image.center {
+  width: var(--center-image-width);
+  max-height: var(--center-image-width);
+  z-index: 5;
+}
+
+.carrousel-image img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all var(--transition-time) ease-in-out;
+  border-radius: 8px;
+}
+
+.nav-button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: background-color var(--transition-time) ease;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-button.prev {
+  left: 10px;
+}
+
+.nav-button.next {
+  right: 10px;
+}
+
+/* Animation class for slide transition */
+.slide-transition {
+  transition: all var(--transition-time) ease-in-out;
+}
+
+/* Animation for carousel content */
+.carrousel-viewport-inner {
+  display: flex;
+  gap: var(--image-gap);
+  transition: transform var(--transition-time) ease-in-out;
+  align-items: center;
+  overflow: visible;
+} 

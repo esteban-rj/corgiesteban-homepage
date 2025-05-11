@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import './Carrousel.css';
+import './Skills.css';
 
-const Carrousel = () => {
+const Skills = () => {
   const [images] = useState([
     '/skills/aws.png',
     '/skills/java.webp',
@@ -27,7 +27,7 @@ const Carrousel = () => {
               }}
             />
             <div className="image-label">
-              {image.split('/').pop().split('.')[0]}
+              {image.split('/').pop().split('.')[0].toUpperCase()}
             </div>
           </div>
         ))}
@@ -36,4 +36,4 @@ const Carrousel = () => {
   );
 };
 
-export default Carrousel;
+export default Skills;

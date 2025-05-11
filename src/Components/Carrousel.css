@@ -1,7 +1,7 @@
 :root {
   --side-image-width: 100px;
   --center-image-width: 150px;
-  --image-gap: 50px;
+  --image-gap: 30px;
   --transition-time: 250ms;
 }
 
@@ -20,7 +20,9 @@
   overflow: visible;
   position: relative;
   align-items: center;
-  height: 180px; /* Accommodate the largest image height plus some margin */
+  height: 180px;
+  width: calc(var(--center-image-width) + 4 * (var(--side-image-width) + var(--image-gap)));
+  margin: 0 auto;
 }
 
 .carrousel-image {
@@ -91,4 +93,26 @@
   transition: transform var(--transition-time) ease-in-out;
   align-items: center;
   overflow: visible;
+}
+
+/* Image label styles */
+.image-label {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+  opacity: 0;
+  transition: opacity var(--transition-time) ease-in-out;
+}
+
+.image-label.fade-in {
+  opacity: 1;
+}
+
+.image-label.fade-out {
+  opacity: 0;
 } 

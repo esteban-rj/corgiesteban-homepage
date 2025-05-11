@@ -39,12 +39,12 @@ const Carrousel = () => {
     return () => window.removeEventListener('resize', updateDimensions);
   }, []);
   
-  // Get three images to display, handling wrap-around at the end
+  // Get five images to display, handling wrap-around at the end
   const getVisibleImages = () => {
-    if (images.length < 3) return [];
+    if (images.length < 5) return [];
     
     const visibleImages = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
       // Calculate index with wrap-around
       const imgIndex = (currentIndex + i) % images.length;
       visibleImages.push({
@@ -56,7 +56,7 @@ const Carrousel = () => {
   };
   
   const nextSlide = () => {
-    if (isTransitioning || images.length < 3) return;
+    if (isTransitioning || images.length < 5) return;
     
     setIsTransitioning(true);
     
@@ -67,7 +67,7 @@ const Carrousel = () => {
   };
   
   const prevSlide = () => {
-    if (isTransitioning || images.length < 3) return;
+    if (isTransitioning || images.length < 5) return;
     
     setIsTransitioning(true);
     
@@ -106,6 +106,14 @@ const Carrousel = () => {
   
   const visibleImages = getVisibleImages();
   
+  // Get the current center image name without extension
+  const getCurrentImageName = () => {
+    if (visibleImages.length === 0) return '';
+    const centerImage = visibleImages[2]; // Index 2 is the center image
+    const fileName = centerImage.src.split('/').pop(); // Get filename with extension
+    return fileName.split('.')[0]; // Remove extension
+  };
+  
   return (
     <div className="carrousel-container">
       {images.length > 0 && (
@@ -126,7 +134,7 @@ const Carrousel = () => {
             >
               {visibleImages.map((image, index) => (
                 <div 
-                  className={`carrousel-image ${index === 1 ? 'center' : ''} ${isTransitioning ? 'slide-transition' : ''}`} 
+                  className={`carrousel-image ${index === 2 ? 'center' : ''} ${isTransitioning ? 'slide-transition' : ''}`} 
                   key={`slide-${image.index}`}
                 >
                   <img 
@@ -149,6 +157,10 @@ const Carrousel = () => {
           >
             &gt;
           </button>
+
+          <div className={`image-label ${isTransitioning ? 'fade-out' : 'fade-in'}`}>
+            {getCurrentImageName()}
+          </div>
         </>
       )}
     </div>

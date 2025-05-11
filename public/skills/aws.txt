@@ -1,0 +1,1 @@
+Over 5 years working with AWS services, AWS solutions architect Associate certified, worked with Api Gateway, App Sync, Route 53, CloudFront, ALB, NLB, EC2, ECS, Lambda, SQS, SNS, MSK Kafka, Sage Maker, Bedrock, Rekognition, Cognito, Redis and others

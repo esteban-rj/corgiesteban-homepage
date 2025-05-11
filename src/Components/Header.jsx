@@ -11,7 +11,7 @@ const Header = () => {
               alt="Corgi Face" 
               className="w-6 h-6 transform transition-transform duration-500 group-hover:-rotate-45" 
             />
-            <span className="text-xl font-bold text-black cursor-pointer">Esteban Romero</span>
+            <span className="text-xl font-bold text-black cursor-pointer">The Esteban Romero Page</span>
           </div>
           <div className="flex items-center space-x-8">
             <a

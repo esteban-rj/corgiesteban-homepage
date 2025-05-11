@@ -1,6 +1,6 @@
 :root {
   --side-image-width: 100px;
-  --center-image-width: 150px;
+  --center-image-width: 100px;
   --image-gap: 30px;
   --transition-time: 250ms;
 }
@@ -9,46 +9,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 30%;
+  max-width: 400px;
+  margin: 0 auto;
   position: relative;
   padding: 20px 0;
-}
-
-.carrousel-viewport {
-  display: flex;
-  gap: var(--image-gap);
   overflow: visible;
-  position: relative;
-  align-items: center;
-  height: 180px;
-  width: calc(var(--center-image-width) + 4 * (var(--side-image-width) + var(--image-gap)));
-  margin: 0 auto;
 }
 
-.carrousel-image {
-  width: var(--side-image-width);
-  height: auto;
-  max-height: var(--side-image-width);
-  flex-shrink: 0;
-  transition: all var(--transition-time) ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carrousel-image.center {
-  width: var(--center-image-width);
-  max-height: var(--center-image-width);
-  z-index: 5;
-}
-
-.carrousel-image img {
+.swiper {
   width: 100%;
-  height: auto;
-  max-height: 100%;
-  object-fit: contain;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: visible;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: var(--side-image-width);
+  height: var(--side-image-width);
   transition: all var(--transition-time) ease-in-out;
+  opacity: 0.4;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 8px;
+  transition: all var(--transition-time) ease-in-out;
+}
+
+.swiper-slide-active {
+  transform: scale(1.2);
+  z-index: 2;
+  opacity: 1;
+}
+
+.swiper-slide-active img {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-label {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+  opacity: 1;
+  transition: opacity var(--transition-time) ease-in-out;
 }
 
 .nav-button {
@@ -79,40 +93,4 @@
 
 .nav-button.next {
   right: 50px;
-}
-
-/* Animation class for slide transition */
-.slide-transition {
-  transition: all var(--transition-time) ease-in-out;
-}
-
-/* Animation for carousel content */
-.carrousel-viewport-inner {
-  display: flex;
-  gap: var(--image-gap);
-  transition: transform var(--transition-time) ease-in-out;
-  align-items: center;
-  overflow: visible;
-}
-
-/* Image label styles */
-.image-label {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #333;
-  text-transform: capitalize;
-  opacity: 0;
-  transition: opacity var(--transition-time) ease-in-out;
-}
-
-.image-label.fade-in {
-  opacity: 1;
-}
-
-.image-label.fade-out {
-  opacity: 0;
 } 

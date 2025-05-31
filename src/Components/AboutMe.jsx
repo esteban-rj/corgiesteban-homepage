@@ -10,7 +10,7 @@ const AboutMe = () => {
         <div className="flex flex-wrap -mx-4 md:justify-center">
           <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
             <p>
-              Music 🎶, F1 🏎️, art 🎨, pets 🐶 and 💻 Software lover...<br /><br />
+              Music 🎶, F1 🏎️, anime 🎥, pets 🐶 and 💻 Software lover...<br /><br />
               Enjoy working in the technological field to seek, innovate and searching for solutions to meet the client requirements. I enjoy development, architecture and artificial intelligence.
             </p>
           </div>

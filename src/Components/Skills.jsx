@@ -3,6 +3,8 @@ import './Skills.css';
 
 const Skills = () => {
   const [images] = useState([
+    '/skills/angular.png',
+    '/skills/react.png',
     '/skills/aws.png',
     '/skills/java.webp',
     '/skills/python.webp',
@@ -10,7 +12,8 @@ const Skills = () => {
     '/skills/docker.webp',
     '/skills/go.png',
     '/skills/devops.png',
-    '/skills/mlops.png'
+    '/skills/mlops.png',
+    '/skills/linux.png'
   ]);
 
   const [hoverText, setHoverText] = useState('');

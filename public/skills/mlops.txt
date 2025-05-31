@@ -1,0 +1,1 @@
+Currently learning to launch automatized IA workloads (Feature engineering, training and evaluation pipelines) with sage maker.

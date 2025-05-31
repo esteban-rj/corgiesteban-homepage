@@ -1,0 +1,1 @@
+Managed Angular projects on Monolith and Micro Frontends

@@ -13,7 +13,8 @@ const Skills = () => {
     '/skills/go.png',
     '/skills/devops.png',
     '/skills/mlops.png',
-    '/skills/linux.png'
+    '/skills/linux.png',
+    '/skills/github.png'
   ]);
 
   const [hoverText, setHoverText] = useState('');

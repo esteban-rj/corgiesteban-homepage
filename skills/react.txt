@@ -1,0 +1,1 @@
+Manged React projects, this page is made in react. Also learning react native for personal projects.

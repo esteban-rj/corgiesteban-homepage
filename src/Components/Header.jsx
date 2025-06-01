@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center justify-center space-x-8 max-w-4xl w-full">
           <div className="flex items-center gap-2 group">
             <img 
-              src="/corgi-face.svg" 
+              src={process.env.PUBLIC_URL + "/corgi-face.svg"} 
               alt="Corgi Face" 
               className="w-6 h-6 transform transition-transform duration-500 group-hover:-rotate-45" 
             />

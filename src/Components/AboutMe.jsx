@@ -22,7 +22,7 @@ const AboutMe = () => {
           </div>
           <div className="w-full md:w-1/4 px-4 flex justify-center items-center">
             <img
-              src="/cogi-programming-v5.gif" // Assuming public folder is served from the root
+              src={process.env.PUBLIC_URL + "/cogi-programming-v5.gif"}
               alt="Corgi Programmer"
               width={400}
               height={400}

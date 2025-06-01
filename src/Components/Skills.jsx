@@ -23,7 +23,7 @@ const Skills = () => {
 
   const handleMouseEnter = async (skillName) => {
     try {
-      const response = await fetch(`/skills/${skillName.toLowerCase()}.txt`);
+      const response = await fetch(`${process.env.PUBLIC_URL}/skills/${skillName.toLowerCase()}.txt`);
       if (response.ok) {
         const text = await response.text();
         setHoverText(text);
@@ -66,7 +66,7 @@ const Skills = () => {
                 alt={`Image ${index}`}
                 onError={(e) => {
                   console.error(`Error loading image: ${image}`);
-                  e.target.src = '/skills/placeholder.png';
+                  e.target.src = process.env.PUBLIC_URL + '/skills/placeholder.png';
                 }}
               />
               <div className="image-label">

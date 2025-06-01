@@ -44,7 +44,10 @@ const Skills = () => {
   };
 
   return (
-    <div className="grid-container" onMouseMove={handleMouseMove}>
+    <div className="grid-container flex-col" onMouseMove={handleMouseMove}>
+      <p className="text-center text-sm text-gray-600 mb-4">
+        move through tecnologies to see more details...
+      </p>
       <div className="grid">
         {images.map((image, index) => {
           const skillName = image.split('/').pop().split('.')[0];

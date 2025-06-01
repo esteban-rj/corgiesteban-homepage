@@ -9,7 +9,9 @@ function App() {
       <Header></Header>
       <div className='w-2/3 justify-center mt-8'>
         <AboutMe />
-        <Skills></Skills>
+        <div className="mb-[150px]">
+          <Skills />
+        </div>
       </div>
     </div>
   );

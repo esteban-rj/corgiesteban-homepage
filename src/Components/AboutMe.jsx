@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const AboutMe = () => {
+  const [isSectionHovered, setIsSectionHovered] = useState(false);
+
   return (
-    <section className="bg-white py-16">
+    <section 
+      className="bg-white py-16"
+      onMouseEnter={() => setIsSectionHovered(true)}
+      onMouseLeave={() => setIsSectionHovered(false)}
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">
           About Me !
@@ -16,11 +22,11 @@ const AboutMe = () => {
           </div>
           <div className="w-full md:w-1/4 px-4 flex justify-center items-center">
             <img
-              src="/corgi-programmer.png" // Assuming public folder is served from the root
+              src="/cogi-programming-v4.gif" // Assuming public folder is served from the root
               alt="Corgi Programmer"
               width={400}
               height={400}
-              className="rounded-lg shadow-xl"
+              className={`rounded-lg ${isSectionHovered ? 'animate-rotate-corgi' : ''}`}
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import Header from './Components/Header';
 import AboutMe from './Components/AboutMe';
 import Skills from './Components/Skills';
+import Footer from './Components/Footer';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <div className="mb-[150px]">
           <Skills />
         </div>
+        <Footer />
       </div>
     </div>
   );

@@ -53,6 +53,8 @@ const Header = () => {
             <button
               className="p-2 rounded-lg bg-yellow-100 text-yellow-800"
               aria-label="Toggle theme"
+              //invisible for now
+              style={{ display: 'none' }}
             >
               <svg
                 className="w-5 h-5"

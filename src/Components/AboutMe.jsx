@@ -11,7 +11,7 @@ const AboutMe = () => {
           <div className="w-full md:w-1/4 px-4 mb-8 md:mb-0">
             <p>
               Music 🎶, F1 🏎️, anime 🎥, pets 🐶 and 💻 Software lover...<br /><br />
-              Enjoy working in the technological field to seek, innovate and searching for solutions to meet the client requirements. I enjoy development, architecture and artificial intelligence.
+              Enjoy working in the technological field to seek, innovate and searching for solutions to meet the client requirements. I enjoy development, Cloud architecture and artificial intelligence.
             </p>
           </div>
           <div className="w-full md:w-1/4 px-4 flex justify-center items-center">

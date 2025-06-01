@@ -1,1 +1,1 @@
-Experience on deploying API frameworks like FastAPI, Flask and Django. Knowledge working on langchain, LLM, Agents, training and deploying of diverse models, MLOPS and notebooks
+Experience on deploying API frameworks like FastAPI and Flask. Knowledge working on langchain, LLM, Agents, training and deploying of diverse models, MLOPS and notebooks
